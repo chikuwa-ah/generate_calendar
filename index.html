@@ -33,14 +33,27 @@
                 </div>
             </div>
 
-            <div class="button">
-                <div onclick="generateCalender()">
+            <div class="button control">
+                <div onclick="calendarMain()">
                     カレンダー生成
                 </div>
-                <div onclick="buttonClick()">
+                <div id="clear">
                     クリア
                 </div>
-                <a href="#" id="ss" download="html_ss.png">スクリーンショット</a>
+                <div onclick="screenShot()">
+                    ダウンロード
+                </div>
+            </div>
+            <div class="button select" id="select">
+                <div onclick="selectImg(0)">
+                    <img src="./img/delete.png">
+                </div>
+                <div onclick="selectImg(1)">
+                    <img src="./img/purple.png">
+                </div>
+                <div onclick="selectImg(2)">
+                    <img src="./img/green.png">
+                </div>
             </div>
         </div>
 
@@ -49,7 +62,10 @@
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.js"></script>
-    <script src="main.js"></script>
+    <script src="./script/main.js"></script>
+    <script src="./script/displayCalendar.js"></script>
+    <script src="./script/screenShot.js"></script>
+    <script src="./script/check.js"></script>
 </body>
 
 </html>
