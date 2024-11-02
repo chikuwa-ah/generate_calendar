@@ -1,0 +1,116 @@
+@font-face {
+    font-family: 'shirokuma';
+    src: url(./fonts/001Shirokuma-Regular.woff);
+}
+
+@font-face {
+    font-family: 'kokoro';
+    src: url(./fonts/Kokoro.woff);
+}
+
+.input {
+    display: flex;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    opacity: 1;
+}
+
+input {
+    height: 100%;
+    padding: 10px;
+    font-size: 18px;
+}
+
+.selectbox {
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+}
+
+.selectbox::after {
+    position: absolute;
+    right: 15px;
+    width: 10px;
+    height: 7px;
+    background-color: #535353;
+    clip-path: polygon(0 0, 100% 0, 50% 100%);
+    content: '';
+    pointer-events: none;
+}
+
+.selectbox select {
+    appearance: none;
+    min-width: 220px;
+    height: 2.8em;
+    padding: .4em calc(.8em + 30px) .4em .8em;
+    border: 1px solid #000000;
+    border-radius: 3px;
+    background-color: #fff;
+    color: #000000;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+
+.button {
+    margin-top: 10px;
+    user-select: none;
+}
+
+.button>* {
+    cursor: pointer;
+    transition: .4s;
+    padding: 15px;
+    border: 1px solid;
+    display: inline-block;
+    background-color: #fff;
+}
+
+.button>*:hover {
+    opacity: 0.5;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+
+/* display part */
+
+.display_part {
+    margin: 30px 0;
+    width: 800px;
+    font-family: 'shirokuma';
+    background-color: #e0c361;
+    color: #fff;
+}
+
+.display_part div>* {
+    margin: 0;
+}
+
+.show_year {
+    padding-left: 50px;
+    font-size: 20px;
+}
+
+.show_month {
+    text-align: center;
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.week {
+    width: 100%;
+    display: flex;
+    padding: 15px 0;
+    text-align: center;
+}
+
+.week>* {
+    width: 100%;
+    font-size: 30px;
+}
