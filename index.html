@@ -9,40 +9,6 @@
 </head>
 
 <body>
-    <svg style="display: none;">
-        <filter id="filter--hue0" x="0" y="0">
-            <feColorMatrix type="hueRotate" values="0">
-        </filter>
-
-        <filter id="filter--saturate0" x="0" y="0">
-            <feColorMatrix type="saturate" values="1">
-        </filter>
-
-        <filter id="filter--brightness0" x="0" y="0">
-            <feComponentTransfer>
-                <feFuncR type="linear" slope="1" />
-                <feFuncG type="linear" slope="1" />
-                <feFuncB type="linear" slope="1" />
-            </feComponentTransfer>
-        </filter>
-
-        <filter id="filter--hue1" x="0" y="0">
-            <feColorMatrix type="hueRotate" values="0">
-        </filter>
-
-        <filter id="filter--saturate1" x="0" y="0">
-            <feColorMatrix type="saturate" values="1">
-        </filter>
-
-        <filter id="filter--brightness1" x="0" y="0">
-            <feComponentTransfer>
-                <feFuncR type="linear" slope="1" />
-                <feFuncG type="linear" slope="1" />
-                <feFuncB type="linear" slope="1" />
-            </feComponentTransfer>
-        </filter>
-    </svg>
-
     <section>
         <div class="operation_part">
             <div>
@@ -94,7 +60,9 @@
         </div>
 
 
-        <div class="display_part" id="pallet"></div>
+        <div class="easy-see">
+            <div class="display_part" id="pallet"></div>
+        </div>
 
 
         <div class="adjust">
@@ -114,6 +82,9 @@
                     </div>
                     <div class="adjusted-img">
                         <img src="./img/purple.png" class="img0">
+                        <div class="color-reset">
+                            <p onclick="resetColor(0)">リセット</p>
+                        </div>
                     </div>
                 </div>
                 <div>
@@ -131,6 +102,9 @@
                     </div>
                     <div class="adjusted-img">
                         <img src="./img/green.png" class="img1">
+                        <div class="color-reset">
+                            <p onclick="resetColor(1)">リセット</p>
+                        </div>
                     </div>
                 </div>
             </div>

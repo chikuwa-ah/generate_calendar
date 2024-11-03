@@ -19,7 +19,7 @@ const clear = () => {
 const selectImg = (state) => {
     const selectChild = document.getElementById('select').children;
     for (let i = 0; i < selectChild.length; i++) {
-        selectChild[i].style.backgroundColor = i === state ? '#dedede' : '#e0c361';
+        selectChild[i].style.backgroundColor = i === state ? '#dedede' : '#fff';
     };
 };
 

@@ -10,7 +10,6 @@
 
 body {
     user-select: none;
-    background-color: #e0c361;
 }
 
 .input {
@@ -75,11 +74,12 @@ input[type=number] {
 }
 
 .button>*:hover {
-    opacity: 0.8;
+    opacity: 0.6;
 }
 
 .control>* {
     padding: 15px;
+    border: #000000 solid 1px;
 }
 
 .select {
@@ -89,7 +89,6 @@ input[type=number] {
 .select>* {
     padding: 5px 10px;
     padding-top: 10px;
-    background-color: #e0c361;
     border-radius: 10px;
 }
 
@@ -204,6 +203,19 @@ input[type=number] {
     margin-left: 10px;
 }
 
+.color-reset p {
+    cursor: pointer;
+    display: inline-block;
+    padding: 5px 15px;
+    margin: 0;
+    border: #000000 solid 1px;
+    transition: .3s;
+}
+
+.color-reset p:hover {
+    opacity: 0.6;
+}
+
 .adjusted-img img {
     margin-top: 10px;
     width: 40px;
@@ -230,6 +242,7 @@ input[type=number] {
     width: 80%;
     height: 10px;
     background: #fff;
+    border: #000000 solid 0.4px;
     border-radius: 9999px;
     position: relative;
     top: 5px;
@@ -239,8 +252,12 @@ input[type=number] {
     -webkit-appearance: none;
     appearance: none;
     background: #61c0c0;
-    /* border: #61c0e0 solid; */
+    border: #000000 solid;
     border-radius: 999px;
-    width: 10px;
-    height: 20px;
+    width: 18px;
+    height: 18px;
+}
+
+.easy-see {
+    background-color: #000000;
 }
