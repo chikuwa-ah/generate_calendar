@@ -252,7 +252,7 @@ input[type=number] {
     -webkit-appearance: none;
     appearance: none;
     background: #61c0c0;
-    border: #000000 solid;
+    border: #000000 solid 0.8px;
     border-radius: 999px;
     width: 18px;
     height: 18px;
