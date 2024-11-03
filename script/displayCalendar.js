@@ -29,10 +29,12 @@ const displayIndex = (year, month) => {
 
 const createImgElements = (parent, id) => {
     const src = ['./img/purple.png', './img/green.png'];
-    src.forEach(el => {
+    const className = ['img0', 'img1'];
+    src.forEach((el, i) => {
         const img = document.createElement('img');
         img.src = el;
         img.style.display = 'none';
+        img.classList.add(className[i]);
         img.id = id;
         parent.appendChild(img);
     });
@@ -56,11 +58,11 @@ const displayCalendar = (origin) => {
         <div class="legend_par">
             <div class="legend">
                 <div>
-                    <img src="./img/purple.png" width="30px" height="30px">
+                    <img src="./img/purple.png" width="30px" height="30px" class="img0">
                     <p>営業日 11：00〜16：00</p>
                 </div>
                 <div>
-                    <img src="./img/green.png" width="30px" height="30px">
+                    <img src="./img/green.png" width="30px" height="30px" class="img1">
                     <p>イベント出店</p>
                 </div>
             </div>

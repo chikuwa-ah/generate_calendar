@@ -1,19 +1,22 @@
 'use strict';
 
 const screenShot = () => {
-    if (document.getElementById('pallet').children.length == 0) {
+    const target = document.getElementById('pallet');
+    if (target.children.length == 0) {
         alert('No Calendar');
         return;
     };
-    html2canvas(document.getElementById('pallet'), {
-        onrendered: function (canvas) {
-            const imgData = canvas.toDataURL();
+
+    domtoimage.toPng(target, { scale: 2 })
+        .then((dataUrl) => {
+            const img = new Image();
+            img.src = dataUrl;
             const dummyA = document.createElement('a');
             document.body.appendChild(dummyA);
-            dummyA.href = imgData;
+            dummyA.href = dataUrl;
             dummyA.download = 'calendar.png';
             dummyA.click();
-            document.body.removeChild(dummyA);
-        }
-    });
+        }).catch((error) => {
+            console.error('oops, something went wrong!', error);
+        });
 };

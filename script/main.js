@@ -36,5 +36,6 @@ window.addEventListener('DOMContentLoaded', () => {
     inputMonth.value = date.getMonth() + 2;
 
     selectImg(0);
+    addRangeEvent();
     clear();
 });

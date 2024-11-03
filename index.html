@@ -9,63 +9,141 @@
 </head>
 
 <body>
+    <svg style="display: none;">
+        <filter id="filter--hue0" x="0" y="0">
+            <feColorMatrix type="hueRotate" values="0">
+        </filter>
+
+        <filter id="filter--saturate0" x="0" y="0">
+            <feColorMatrix type="saturate" values="1">
+        </filter>
+
+        <filter id="filter--brightness0" x="0" y="0">
+            <feComponentTransfer>
+                <feFuncR type="linear" slope="1" />
+                <feFuncG type="linear" slope="1" />
+                <feFuncB type="linear" slope="1" />
+            </feComponentTransfer>
+        </filter>
+
+        <filter id="filter--hue1" x="0" y="0">
+            <feColorMatrix type="hueRotate" values="0">
+        </filter>
+
+        <filter id="filter--saturate1" x="0" y="0">
+            <feColorMatrix type="saturate" values="1">
+        </filter>
+
+        <filter id="filter--brightness1" x="0" y="0">
+            <feComponentTransfer>
+                <feFuncR type="linear" slope="1" />
+                <feFuncG type="linear" slope="1" />
+                <feFuncB type="linear" slope="1" />
+            </feComponentTransfer>
+        </filter>
+    </svg>
+
     <section>
         <div class="operation_part">
+            <div>
+                <div class="input">
+                    <input type="number" id="year" />
 
-            <div class="input">
-                <input type="number" id="year" />
+                    <div class="selectbox">
+                        <select id="month">
+                            <option value="1">1月</option>
+                            <option value="2">2月</option>
+                            <option value="3">3月</option>
+                            <option value="4">4月</option>
+                            <option value="5">5月</option>
+                            <option value="6">6月</option>
+                            <option value="7">7月</option>
+                            <option value="8">8月</option>
+                            <option value="9">9月</option>
+                            <option value="10">10月</option>
+                            <option value="11">11月</option>
+                            <option value="12">12月</option>
+                        </select>
+                    </div>
+                </div>
 
-                <div class="selectbox">
-                    <select id="month">
-                        <option value="1">1月</option>
-                        <option value="2">2月</option>
-                        <option value="3">3月</option>
-                        <option value="4">4月</option>
-                        <option value="5">5月</option>
-                        <option value="6">6月</option>
-                        <option value="7">7月</option>
-                        <option value="8">8月</option>
-                        <option value="9">9月</option>
-                        <option value="10">10月</option>
-                        <option value="11">11月</option>
-                        <option value="12">12月</option>
-                    </select>
+                <div class="button control">
+                    <div onclick="calendarMain()">
+                        カレンダー生成
+                    </div>
+                    <div id="clear">
+                        クリア
+                    </div>
+                    <div onclick="screenShot()">
+                        ダウンロード
+                    </div>
                 </div>
-            </div>
 
-            <div class="button control">
-                <div onclick="calendarMain()">
-                    カレンダー生成
-                </div>
-                <div id="clear">
-                    クリア
-                </div>
-                <div onclick="screenShot()">
-                    ダウンロード
-                </div>
-            </div>
-            <div class="button select" id="select">
-                <div onclick="selectImg(0)">
-                    <img src="./img/delete.png">
-                </div>
-                <div onclick="selectImg(1)">
-                    <img src="./img/purple.png">
-                </div>
-                <div onclick="selectImg(2)">
-                    <img src="./img/green.png">
+                <div class="button select" id="select">
+                    <div onclick="selectImg(0)">
+                        <img src="./img/delete.png">
+                    </div>
+                    <div onclick="selectImg(1)">
+                        <img src="./img/purple.png" class="img0">
+                    </div>
+                    <div onclick="selectImg(2)">
+                        <img src="./img/green.png" class="img1">
+                    </div>
                 </div>
             </div>
         </div>
 
+
         <div class="display_part" id="pallet"></div>
+
+
+        <div class="adjust">
+            <div class="slider">
+                <div>
+                    <div class="slider-unit">
+                        <label>色相</label>
+                        <input type="range" value="0" min="0" max="360" class="range" id="hue0">
+                    </div>
+                    <div class="slider-unit">
+                        <label>彩度</label>
+                        <input type="range" value="1" min="0" max="3" step="0.1" class="range" id="saturate0">
+                    </div>
+                    <div class="slider-unit">
+                        <label>明度</label>
+                        <input type="range" value="1" min="0" max="3" step="0.1" class="range" id="brightness0">
+                    </div>
+                    <div class="adjusted-img">
+                        <img src="./img/purple.png" class="img0">
+                    </div>
+                </div>
+                <div>
+                    <div class="slider-unit">
+                        <label>色相</label>
+                        <input type="range" value="0" min="0" max="360" class="range" id="hue1">
+                    </div>
+                    <div class="slider-unit">
+                        <label>彩度</label>
+                        <input type="range" value="1" min="0" max="3" step="0.1" class="range" id="saturate1">
+                    </div>
+                    <div class="slider-unit">
+                        <label>明度</label>
+                        <input type="range" value="1" min="0" max="3" step="0.1" class="range" id="brightness1">
+                    </div>
+                    <div class="adjusted-img">
+                        <img src="./img/green.png" class="img1">
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dom-to-image@2.6.0/dist/dom-to-image.min.js"></script>
     <script src="./script/main.js"></script>
     <script src="./script/displayCalendar.js"></script>
     <script src="./script/screenShot.js"></script>
     <script src="./script/check.js"></script>
+    <script src="./script/colorChange.js"></script>
 </body>
 
 </html>
