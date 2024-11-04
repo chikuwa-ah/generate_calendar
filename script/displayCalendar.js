@@ -56,16 +56,21 @@ const displayCalendar = (origin) => {
 
     pallet.innerHTML += `
         <div class="legend_par">
-            <div class="legend">
+            <div class="legend" id="apply-font1">
                 <div>
                     <img src="./img/purple.png" width="30px" height="30px" class="img0">
-                    <p>営業日 11：00〜16：00</p>
+                    <p class="output-text" id="out-text0"></p>
                 </div>
                 <div>
                     <img src="./img/green.png" width="30px" height="30px" class="img1">
-                    <p>イベント出店</p>
+                    <p class="output-text" id="out-text1"></p>
                 </div>
             </div>
-        </div>
-        `;
+        </div>`;
+
+    const textBoxList = document.querySelectorAll('.adjust-text');
+    textBoxList.forEach((textBox, i) => {
+        const output = document.getElementById(`out-text${i}`);
+        output.textContent = textBox.value;
+    });
 };

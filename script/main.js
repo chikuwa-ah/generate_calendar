@@ -24,6 +24,8 @@ const calendarMain = () => {
     const originCalendar = createDateArray(firstDay, finalDate);
     displayCalendar(originCalendar);
     calendarClick();
+    addTextChangeEvent();
+    addFontSelectEvent();
 };
 
 

@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="./img/favicon.svg">
+    <link rel="shortcut icon" href="./img/favicon.svg">
+    <link rel="apple-touch-icon" href="./img/favicon.svg">
     <title>営業日カレンダー生成</title>
 </head>
 
@@ -60,7 +63,7 @@
         </div>
 
 
-        <div class="easy-see">
+        <div class="easy-see" id="apply-font0">
             <div class="display_part" id="pallet"></div>
         </div>
 
@@ -108,6 +111,44 @@
                     </div>
                 </div>
             </div>
+            <div>
+                <div class="text">
+                    <input type="text" class="adjust-text" id="ad-text0" value="営業日 11：00〜16：00" disabled>
+                    <input type="text" class="adjust-text" id="ad-text1" value="イベント出店" disabled>
+                </div>
+                <div class="font">
+                    <div class="flex">
+                        <p>カレンダー</p>
+                        <p>凡例</p>
+                    </div>
+                    <div class="flex">
+                        <div class="selectbox font-select">
+                            <select id="font0" class="select-font" disabled>
+                                <option value="1">しろくま</option>
+                                <option value="2">コーポレートロゴ</option>
+                                <option value="3">いろは角ゴシック</option>
+                                <option value="4">Kゴシック</option>
+                                <option value="5">こころ</option>
+                                <option value="6">木漏れ日</option>
+                                <option value="7">メメロン</option>
+                                <option value="8">ピクセル</option>
+                            </select>
+                        </div>
+                        <div class="selectbox font-select">
+                            <select id="font1" class="select-font" disabled>
+                                <option value="1">しろくま</option>
+                                <option value="2">コーポレートロゴ</option>
+                                <option value="3">いろは角ゴシック</option>
+                                <option value="4">Kゴシック</option>
+                                <option value="5" selected>こころ</option>
+                                <option value="6">木漏れ日</option>
+                                <option value="7">メメロン</option>
+                                <option value="8">ピクセル</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -116,8 +157,8 @@
     <script src="./script/main.js"></script>
     <script src="./script/displayCalendar.js"></script>
     <script src="./script/screenShot.js"></script>
-    <script src="./script/check.js"></script>
-    <script src="./script/colorChange.js"></script>
+    <script src="./script/coloring.js"></script>
+    <script src="./script/adjustment.js"></script>
 </body>
 
 </html>
