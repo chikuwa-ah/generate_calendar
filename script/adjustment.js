@@ -92,4 +92,46 @@ const addFontSelectEvent = () => {
         select.disabled = false;
         new selectHandler(select);
     });
-}
+};
+
+const letterColorChange = (color) => {
+    const target = document.querySelector('.easy-see');
+    target.style.color = color;
+
+    const noHush = color.replace('#', '');
+    const decColorList = noHush.match(/.{2}/g).map(hex => parseInt(hex, 16));
+    // const keyNumber = Math.max(...decColorList) + Math.min(...decColorList);
+    let backColor = "#";
+    decColorList.forEach(decColor => {
+        const complementary = 255 - decColor;
+        const reHex = complementary.toString(16);
+        backColor += reHex;
+    });
+    target.style.backgroundColor = backColor;
+};
+
+const addLetterColorChangeEvent = () => {
+    const picker = document.getElementById('letter-color-picker');
+    const textBox = document.getElementById('letter-color-text');
+    picker.disabled = false;
+    textBox.disabled = false;
+
+    picker.addEventListener('input', () => {
+        textBox.value = picker.value;
+        letterColorChange(picker.value);
+    });
+
+    textBox.addEventListener('change', () => {
+        const noHush = textBox.value.replace('#', '');
+        if (noHush.length != 6) return;
+        const primeList = noHush.match(/.{2}/g);
+        let isInNoNaN = true;
+        primeList.forEach(prime => {
+            const dec = parseInt(prime, 16);
+            if (Number.isNaN(dec)) {
+                isInNoNaN = false;
+            };
+        });
+        if (isInNoNaN) letterColorChange(textBox.value);
+    });
+};

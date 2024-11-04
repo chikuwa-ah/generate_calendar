@@ -111,47 +111,63 @@
                     </div>
                 </div>
             </div>
-            <div>
+
+            <div class="flex">
                 <div class="text">
                     <input type="text" class="adjust-text" id="ad-text0" value="営業日 11：00〜16：00" disabled>
                     <input type="text" class="adjust-text" id="ad-text1" value="イベント出店" disabled>
                 </div>
-                <div class="font">
-                    <div class="flex">
-                        <p>カレンダー</p>
-                        <p>凡例</p>
+                <div class="color-picker">
+                    <p>文字色変更</p>
+                    <div>
+                        <input type="text" id="letter-color-text" value="#ffffff" disabled>
+                        <input type="color" id="letter-color-picker" value="#ffffff" disabled>
                     </div>
-                    <div class="flex">
-                        <div class="selectbox font-select">
-                            <select id="font0" class="select-font" disabled>
-                                <option value="1">しろくま</option>
-                                <option value="2">コーポレートロゴ</option>
-                                <option value="3">いろは角ゴシック</option>
-                                <option value="4">Kゴシック</option>
-                                <option value="5">こころ</option>
-                                <option value="6">木漏れ日</option>
-                                <option value="7">メメロン</option>
-                                <option value="8">ピクセル</option>
-                            </select>
-                        </div>
-                        <div class="selectbox font-select">
-                            <select id="font1" class="select-font" disabled>
-                                <option value="1">しろくま</option>
-                                <option value="2">コーポレートロゴ</option>
-                                <option value="3">いろは角ゴシック</option>
-                                <option value="4">Kゴシック</option>
-                                <option value="5" selected>こころ</option>
-                                <option value="6">木漏れ日</option>
-                                <option value="7">メメロン</option>
-                                <option value="8">ピクセル</option>
-                            </select>
-                        </div>
+                </div>
+            </div>
+
+            <div class="font">
+                <div class="flex">
+                    <p>カレンダー</p>
+                    <p>凡例</p>
+                </div>
+                <div class="flex">
+                    <div class="selectbox font-select">
+                        <select id="font0" class="select-font" disabled>
+                            <option value="1">しろくま</option>
+                            <option value="2">コーポレートロゴ</option>
+                            <option value="3">いろは角ゴシック</option>
+                            <option value="4">Kゴシック</option>
+                            <option value="5">こころ</option>
+                            <option value="6">木漏れ日</option>
+                            <option value="7">メメロン</option>
+                            <option value="8">ピクセル</option>
+                        </select>
+                    </div>
+                    <div class="selectbox font-select">
+                        <select id="font1" class="select-font" disabled>
+                            <option value="1">しろくま</option>
+                            <option value="2">コーポレートロゴ</option>
+                            <option value="3">いろは角ゴシック</option>
+                            <option value="4">Kゴシック</option>
+                            <option value="5" selected>こころ</option>
+                            <option value="6">木漏れ日</option>
+                            <option value="7">メメロン</option>
+                            <option value="8">ピクセル</option>
+                        </select>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+    <section>
+        <div class="note">
+            <span>*ダウンロードには時間がかかることがあります。</span>
+            <span>*背景の色は画像に反映されません。</span>
+        </div>
+    </section>
 
+    <footer><span>©chikuwa-ah</span></footer>
 
     <script src="https://cdn.jsdelivr.net/npm/dom-to-image@2.6.0/dist/dom-to-image.min.js"></script>
     <script src="./script/main.js"></script>

@@ -127,7 +127,6 @@ input[type=number] {
     margin: 30px 0;
     width: 900px;
     position: relative;
-    color: #fff;
 }
 
 .display_part div>* {
@@ -296,18 +295,31 @@ input[type=number] {
     font-size: 16px;
 }
 
+.color-picker {
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+.color-picker p {
+    margin: 0;
+}
+
+.color-picker div {
+    display: flex;
+    align-items: center;
+}
+
+
 .easy-see {
     font-family: 'shirokuma';
     letter-spacing: -6px;
     background-color: #000000;
+    color: #ffffff;
+    display: inline-block;
 }
 
 .flex {
     display: flex;
-}
-
-.flex>* {
-    width: 100%;
 }
 
 .font {
@@ -321,4 +333,23 @@ input[type=number] {
 
 .font-select {
     margin-left: 10px;
+}
+
+
+.note span {
+    display: block;
+    color: #707070;
+    font-size: 12px;
+}
+
+footer {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+footer span {
+    position: fixed;
+    bottom: 0;
+    padding: 15px;
 }
