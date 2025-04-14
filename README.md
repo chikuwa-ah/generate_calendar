@@ -4,6 +4,4 @@
 
 <a href="https://chikuwa-ah.github.io/generate_calendar/">chiyelezgero cha vinthu</a>
 
-Google Chrome, Firefox で動くよ
-
-ios, Safari には対応できなかったよ
+Google Chrome, Firefox で動作
